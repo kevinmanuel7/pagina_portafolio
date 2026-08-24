@@ -1,0 +1,79 @@
+/* ---- Paleta de colores propia ---- */
+:root {
+  --color-marino: #1b2a4a;   /* azul marino - color principal */
+  --color-marino-claro: #2e4372;
+  --color-beige: #f2e9dc;    /* beige - fondo */
+  --color-beige-oscuro: #e2d4bd;
+  --color-acento: #c8a165;   /* dorado suave - acento/hover */
+  --color-texto: #2b2b2b;
+}
+
+/* ---- Tipografía y espaciado general ---- */
+body {
+  font-family: 'Segoe UI', Verdana, sans-serif;
+  background-color: var(--color-beige);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  letter-spacing: 0.5px;
+}
+
+/* ---- Personalización de componentes Bootstrap ---- */
+
+/* Navbar: se reemplaza el bg-dark de Bootstrap por el azul marino propio */
+.navbar {
+  background-color: var(--color-marino) !important;
+}
+
+/* Botón primario: se personaliza el color por el de la paleta propia */
+.btn-primary {
+  background-color: var(--color-marino);
+  border-color: var(--color-marino);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+  color: var(--color-marino);
+}
+
+/* Tarjetas de proyectos: fondo beige y borde sutil en vez del default */
+.card {
+  background-color: #fffdf9;
+  border: 1px solid var(--color-beige-oscuro);
+}
+
+/* Footer: mismo azul marino de la navbar para dar identidad consistente */
+footer {
+  background-color: var(--color-marino) !important;
+}
+
+/* ---- Clase propia ---- */
+.intro-text {
+  max-width: 600px;
+  font-size: 1.05rem;
+  color: var(--color-marino-claro);
+  border-left: 3px solid var(--color-acento);
+  padding-left: 1rem;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+/* ----Hover en las tarjetas de proyectos ---- */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0.75rem 1.5rem rgba(27, 42, 74, 0.25);
+}
+
+/* ---- Detalle en los badges de habilidades ---- */
+.badge.bg-secondary {
+  background-color: var(--color-marino-claro) !important;
+  font-weight: 500;
+}
